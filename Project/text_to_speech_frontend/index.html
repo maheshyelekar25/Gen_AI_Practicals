@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voxify — Text to Speech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🔊</div>
+        <div>
+          <h1>Voxify</h1>
+          <p>Text to Speech Converter</p>
+        </div>
+      </div>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        Browser Speech Engine
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-badge">✨ SIMPLE • FAST • FREE</div>
+        <h2>Turn your words into a voice.</h2>
+        <p>Type anything below, choose a voice, and let your browser read it aloud.</p>
+      </section>
+
+      <section class="card workspace">
+        <div class="section-heading">
+          <div>
+            <h3>Write your text</h3>
+            <p>Your text will be converted into speech instantly.</p>
+          </div>
+          <span id="charCount">0 / 3000</span>
+        </div>
+
+        <textarea
+          id="textInput"
+          maxlength="3000"
+          placeholder="Type or paste your text here..."
+          aria-label="Text to convert to speech"
+        ></textarea>
+
+        <div class="quick-actions">
+          <button class="text-btn" id="sampleBtn">📝 Load Sample</button>
+          <button class="text-btn" id="clearBtn">🗑 Clear</button>
+        </div>
+
+        <div class="settings-grid">
+          <div class="field">
+            <label for="voiceSelect">Voice</label>
+            <select id="voiceSelect">
+              <option>Loading voices...</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rate">Speed <strong id="rateValue">1.0×</strong></label>
+            <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1" />
+          </div>
+
+          <div class="field">
+            <label for="pitch">Pitch <strong id="pitchValue">1.0</strong></label>
+            <input id="pitch" type="range" min="0.5" max="2" step="0.1" value="1" />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="primary-btn" id="speakBtn">▶ Speak</button>
+          <button class="secondary-btn" id="pauseBtn">⏸ Pause</button>
+          <button class="secondary-btn" id="resumeBtn">▶ Resume</button>
+          <button class="secondary-btn danger" id="stopBtn">⏹ Stop</button>
+        </div>
+
+        <div class="activity">
+          <div class="activity-icon" id="activityIcon">🎙</div>
+          <div>
+            <strong id="activityTitle">Ready to speak</strong>
+            <p id="activityText">Enter some text and press Speak.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">⚡</div>
+          <h4>Instant Speech</h4>
+          <p>Uses your browser's built-in speech synthesis engine.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎛</div>
+          <h4>Voice Controls</h4>
+          <p>Adjust voice, speed, and pitch for a better experience.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔒</div>
+          <h4>Privacy Friendly</h4>
+          <p>Your text stays in the browser for this frontend demo.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Text-to-Speech Conversion Project • HTML • CSS • JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
